@@ -4,7 +4,7 @@ In connected mobile app settings, back-ends have no means to reliably verify the
 
 We present Fides, which improves the security properties of typical connected applications and foregoes heuristics for determining a device's state such as SafetyNet or root checks. At its core, our work is based on the advancements of Android's key attestation capabilities, which means that it does not impose a performance penalty. Our concept is widely applicable in the real world and does not remain a purely academic thought experiment. We demonstrate this by providing a light-weight, easy-to use library that is freely available as open source software. We have verified that Fides even outperforms the security measures integrated into critical applications like Google Pay.
 
-Paper by Bernd Prünster, Gerald Palfinger, and Christian Kollmann. Presented at [SECRYPT 2019](http://www.secrypt.icete.org/?y=2019).
+[Fides — Unleashing the Full Potential of Remote Attestation](https://graz.pure.elsevier.com/en/publications/fides-unleashing-the-full-potential-of-remote-attestation), paper by Bernd Prünster, Gerald Palfinger, and Christian Kollmann, presented at [SECRYPT 2019](http://www.secrypt.icete.org/?y=2019).
 
 ## Android Key Attestation Service & Library
 
