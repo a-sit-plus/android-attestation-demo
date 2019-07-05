@@ -1,4 +1,4 @@
-# Fides - Android Key Attestation Library
+# Fides – Android Key Attestation Library
 
 [AttestationLib](./lib/src/main/java/com/example/lib/AttestationLib.kt) performs the following procedure:
  1. Lib gets an attestation challenge (TLS with server authentication) from the service (under the path `/`)

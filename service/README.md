@@ -1,4 +1,4 @@
-# Fides - Android Key Attestation Service
+# Fides – Android Key Attestation Service
 
 API endpoints:
  - `/` sends a random attestation challenge to the client
