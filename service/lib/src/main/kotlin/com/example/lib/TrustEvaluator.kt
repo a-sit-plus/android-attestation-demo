@@ -24,33 +24,33 @@ public class TrustEvaluator(
         }
 
         var lot = LevelOfTrust.HIGH
-        val explanationStrings = mutableListOf<String>()
+        val explanation = mutableListOf<String>()
 
         if (!isLatestAndroidOs(attestationCertificate)) {
             lot = LevelOfTrust.MEDIUM
-            explanationStrings.add("Android OS not up-to-date")
+            explanation.add("Android OS not up-to-date")
         }
 
         if (!isTeeEnforcedAttestation(attestationCertificate)) {
             lot = LevelOfTrust.LOW
-            explanationStrings.add("Attestation security level is not hardware-backed")
+            explanation.add("Attestation security level is not hardware-backed")
         }
 
         if (!isRootOfTrustPresent(attestationCertificate)) {
             lot = LevelOfTrust.LOW
-            explanationStrings.add("Verified Boot state unknown")
+            explanation.add("Verified Boot state unknown")
         } else {
             if (!isLockedBootloader(attestationCertificate)) {
                 lot = LevelOfTrust.LOW
-                explanationStrings.add("Bootloader not locked")
+                explanation.add("Bootloader not locked")
             }
             if (!isSystemImageVerified(attestationCertificate)) {
                 lot = LevelOfTrust.LOW
-                explanationStrings.add("System image not verified")
+                explanation.add("System image not verified")
             }
         }
 
-        return LevelOfTrustContainer(lot, explanationStrings.joinToString(", "))
+        return LevelOfTrustContainer(lot, explanation.joinToString(", "))
     }
 
     private fun isTeeEnforcedAttestation(attestationCertificate: AttestationCertificate) =

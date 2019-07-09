@@ -54,7 +54,6 @@ class ApiController {
         } catch (t: Throwable) {
             throw BadCredentialsException(t.message)
         }
-
     }
 
     @GetMapping("/lot/high")
